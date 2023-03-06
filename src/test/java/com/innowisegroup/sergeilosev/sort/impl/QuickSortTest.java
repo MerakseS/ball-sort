@@ -11,9 +11,11 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import com.innowisegroup.sergeilosev.sort.Sort;
+
 class QuickSortTest {
 
-    private static QuickSort quickSort;
+    private static Sort quickSort;
 
     @BeforeAll
     static void beforeAll() {
@@ -53,16 +55,16 @@ class QuickSortTest {
         final Random random = new Random(seed);
 
         List<Integer> actualList = IntStream.generate(random::nextInt)
-                .limit(limit)
-                .boxed()
-                .collect(Collectors.toList());
+            .limit(limit)
+            .boxed()
+            .collect(Collectors.toList());
 
         random.setSeed(seed);
         List<Integer> expectedList = IntStream.generate(random::nextInt)
-                .limit(limit)
-                .sorted()
-                .boxed()
-                .toList();
+            .limit(limit)
+            .sorted()
+            .boxed()
+            .toList();
 
         quickSort.sort(actualList);
 
