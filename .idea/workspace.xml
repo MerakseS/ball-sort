@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da662194-e7fe-4446-8ea7-faf4b0c22855" name="Changes" comment="#7 Add Ball class comparator">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/HeapSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/HeapSortTest.java" afterDir="false" />
+    <list default="true" id="da662194-e7fe-4446-8ea7-faf4b0c22855" name="Changes" comment="#8 Add Heap sort">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/Sort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/QuickSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +82,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -121,6 +118,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "editor.preferences.folding",
     "vue.rearranger.settings.migration": "true"
   }
@@ -135,6 +135,29 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.ballsort [test]">
+    <configuration name="BallHeapSortTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.innowisegroup.sergeilosev.BallHeapSortTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="BallQuickSortTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -149,29 +172,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.innowisegroup.sergeilosev.BallQuickSortTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="BallQuickSortTest.name" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.innowisegroup.sergeilosev.BallQuickSortTest.name&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -251,10 +251,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ballsort [test]" />
+        <item itemvalue="Gradle.BallHeapSortTest" />
         <item itemvalue="Gradle.BallQuickSortTest" />
         <item itemvalue="Gradle.HeapSortTest" />
         <item itemvalue="Gradle.QuickSortTest" />
-        <item itemvalue="Gradle.BallQuickSortTest.name" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +269,8 @@
       <workItem from="1678090445513" duration="3000" />
       <workItem from="1678112272615" duration="5250000" />
       <workItem from="1678175956621" duration="7206000" />
-      <workItem from="1678210942075" duration="8713000" />
+      <workItem from="1678210942075" duration="9035000" />
+      <workItem from="1678220814529" duration="604000" />
     </task>
     <task id="LOCAL-00001" summary="#3 Add comparators for Balls">
       <created>1678178086138</created>
@@ -313,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678216508344</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="#8 Add Heap sort">
+      <created>1678220711582</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678220711582</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,6 +344,7 @@
     <MESSAGE value="#5 Add more variants for Balls constructor" />
     <MESSAGE value="#6 Remove duplicated code" />
     <MESSAGE value="#7 Add Ball class comparator" />
-    <option name="LAST_COMMIT_MESSAGE" value="#7 Add Ball class comparator" />
+    <MESSAGE value="#8 Add Heap sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="#8 Add Heap sort" />
   </component>
 </project>
