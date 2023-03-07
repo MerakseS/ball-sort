@@ -1,5 +1,6 @@
 package com.innowisegroup.sergeilosev;
 
+import com.innowisegroup.sergeilosev.comparator.BallClassComparator;
 import com.innowisegroup.sergeilosev.comparator.BallColorComparator;
 import com.innowisegroup.sergeilosev.comparator.BallSizeComparator;
 import com.innowisegroup.sergeilosev.model.Ball;
@@ -74,6 +75,24 @@ public class BallQuickSortTest {
         );
 
         quickSort.sort(actualBallList, comparator);
+
+        Assertions.assertEquals(expectedBallList, actualBallList);
+    }
+
+    @Test
+    void sortBallsByClass() {
+        Comparator<Ball> comparator = new BallClassComparator();
+
+        List<Ball> expectedBallList = Arrays.asList(
+                new Basketball(76, Color.WHITE),
+                new Football(65),
+                new PingPongBall(),
+                new PingPongBall(Color.ORANGE),
+                new Volleyball(Color.GREEN),
+                new Volleyball(68)
+        );
+
+        actualBallList = quickSort.sort(actualBallList, comparator);
 
         Assertions.assertEquals(expectedBallList, actualBallList);
     }

@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da662194-e7fe-4446-8ea7-faf4b0c22855" name="Changes" comment="#5 Add more variants for Balls constructor">
+    <list default="true" id="da662194-e7fe-4446-8ea7-faf4b0c22855" name="Changes" comment="#6 Remove duplicated code">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/comparator/BallClassComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/comparator/BallClassComparatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/Sort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/MergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallMergeSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallMergeSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallQuickSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallQuickSortTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +85,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -127,12 +128,12 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.innowisegroup.sergeilosev.sort" />
       <recent name="com.innowisegroup.sergeilosev.comparator" />
+      <recent name="com.innowisegroup.sergeilosev.sort" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.ballsort [test]">
-    <configuration name="BallQuickSortTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BallClassComparatorTest.firstBallClassEqualsSecond" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -145,7 +146,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowisegroup.sergeilosev.BallQuickSortTest&quot;" />
+            <option value="&quot;com.innowisegroup.sergeilosev.comparator.BallClassComparatorTest.firstBallClassEqualsSecond&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -155,7 +156,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BallQuickSortTest.sortBallsByColor" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BallClassComparatorTest.firstBallClassSmallerThanSecond" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -168,7 +169,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowisegroup.sergeilosev.BallQuickSortTest.sortBallsByColor&quot;" />
+            <option value="&quot;com.innowisegroup.sergeilosev.comparator.BallClassComparatorTest.firstBallClassSmallerThanSecond&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -178,7 +179,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BallQuickSortTest.sortBallsBySizeAndColorReversed" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BallMergeSortTest.sortBallsByClass" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -191,7 +192,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowisegroup.sergeilosev.BallQuickSortTest.sortBallsBySizeAndColorReversed&quot;" />
+            <option value="&quot;com.innowisegroup.sergeilosev.BallMergeSortTest.sortBallsByClass&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -201,7 +202,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BallQuickSortTest.sortBallsWithoutComparator" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BallQuickSortTest.sortBallsByClass" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -214,7 +215,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowisegroup.sergeilosev.BallQuickSortTest.sortBallsWithoutComparator&quot;" />
+            <option value="&quot;com.innowisegroup.sergeilosev.BallQuickSortTest.sortBallsByClass&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -248,10 +249,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ballsort [test]" />
-        <item itemvalue="Gradle.BallQuickSortTest" />
-        <item itemvalue="Gradle.BallQuickSortTest.sortBallsWithoutComparator" />
-        <item itemvalue="Gradle.BallQuickSortTest.sortBallsBySizeAndColorReversed" />
-        <item itemvalue="Gradle.BallQuickSortTest.sortBallsByColor" />
+        <item itemvalue="Gradle.BallQuickSortTest.sortBallsByClass" />
+        <item itemvalue="Gradle.BallMergeSortTest.sortBallsByClass" />
+        <item itemvalue="Gradle.BallClassComparatorTest.firstBallClassEqualsSecond" />
+        <item itemvalue="Gradle.BallClassComparatorTest.firstBallClassSmallerThanSecond" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +267,7 @@
       <workItem from="1678090445513" duration="3000" />
       <workItem from="1678112272615" duration="5250000" />
       <workItem from="1678175956621" duration="7206000" />
-      <workItem from="1678210942075" duration="3130000" />
+      <workItem from="1678210942075" duration="5518000" />
     </task>
     <task id="LOCAL-00001" summary="#3 Add comparators for Balls">
       <created>1678178086138</created>
@@ -296,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678212854048</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="#6 Remove duplicated code">
+      <created>1678215086127</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678215086127</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +325,7 @@
     <MESSAGE value="#3 Add comparators for Balls" />
     <MESSAGE value="#4 Add Merge sort" />
     <MESSAGE value="#5 Add more variants for Balls constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="#5 Add more variants for Balls constructor" />
+    <MESSAGE value="#6 Remove duplicated code" />
+    <option name="LAST_COMMIT_MESSAGE" value="#6 Remove duplicated code" />
   </component>
 </project>
