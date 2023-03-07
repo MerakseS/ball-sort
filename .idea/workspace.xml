@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da662194-e7fe-4446-8ea7-faf4b0c22855" name="Changes" comment="#3 Add comparators for Balls">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/MergeSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/BallMergeSortTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/MergeSortTest.java" afterDir="false" />
+    <list default="true" id="da662194-e7fe-4446-8ea7-faf4b0c22855" name="Changes" comment="#4 Add Merge sort">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/Sort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/QuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/impl/BallQuickSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/BallQuickSortTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/impl/QuickSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/QuickSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Basketball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Basketball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Football.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Football.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/PingPongBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/PingPongBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Volleyball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Volleyball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/BallMergeSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallMergeSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/BallQuickSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallQuickSortTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +97,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jrt:///home/merakses/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/jbr!/java.base/java/lang/Integer.class" root0="SKIP_INSPECTION" />
+    <setting file="jrt:///home/merakses/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/jbr!/java.base/java/util/List.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -121,7 +121,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode",
+    "settings.editor.selected.configurable": "editor.preferences.folding",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -134,8 +134,8 @@
       <recent name="com.innowisegroup.sergeilosev.comparator" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MergeSortTest">
-    <configuration name="MergeSortTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ballsort [test]">
+    <configuration name="BallQuickSortTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -148,7 +148,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowisegroup.sergeilosev.sort.MergeSortTest&quot;" />
+            <option value="&quot;com.innowisegroup.sergeilosev.BallQuickSortTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -158,7 +158,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MergeSortTest.manyUnsortedItems" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BallQuickSortTest.sortBallsByColor" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -171,7 +171,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowisegroup.sergeilosev.sort.MergeSortTest.manyUnsortedItems&quot;" />
+            <option value="&quot;com.innowisegroup.sergeilosev.BallQuickSortTest.sortBallsByColor&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -181,7 +181,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MergeSortTest.oneItem" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BallQuickSortTest.sortBallsBySizeAndColorReversed" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -194,7 +194,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowisegroup.sergeilosev.sort.MergeSortTest.oneItem&quot;" />
+            <option value="&quot;com.innowisegroup.sergeilosev.BallQuickSortTest.sortBallsBySizeAndColorReversed&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -204,7 +204,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MergeSortTest.threeUnsortedItems" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BallQuickSortTest.sortBallsWithoutComparator" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -217,7 +217,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowisegroup.sergeilosev.sort.MergeSortTest.threeUnsortedItems&quot;" />
+            <option value="&quot;com.innowisegroup.sergeilosev.BallQuickSortTest.sortBallsWithoutComparator&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -227,36 +227,34 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MergeSortTest.twoUnsortedItems" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ballsort [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.innowisegroup.sergeilosev.sort.MergeSortTest.twoUnsortedItems&quot;" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MergeSortTest" />
-        <item itemvalue="Gradle.MergeSortTest.manyUnsortedItems" />
-        <item itemvalue="Gradle.MergeSortTest.threeUnsortedItems" />
-        <item itemvalue="Gradle.MergeSortTest.twoUnsortedItems" />
-        <item itemvalue="Gradle.MergeSortTest.oneItem" />
+        <item itemvalue="Gradle.ballsort [test]" />
+        <item itemvalue="Gradle.BallQuickSortTest" />
+        <item itemvalue="Gradle.BallQuickSortTest.sortBallsWithoutComparator" />
+        <item itemvalue="Gradle.BallQuickSortTest.sortBallsBySizeAndColorReversed" />
+        <item itemvalue="Gradle.BallQuickSortTest.sortBallsByColor" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +268,8 @@
       <updated>1678090443859</updated>
       <workItem from="1678090445513" duration="3000" />
       <workItem from="1678112272615" duration="5250000" />
-      <workItem from="1678175956621" duration="6586000" />
+      <workItem from="1678175956621" duration="7206000" />
+      <workItem from="1678210942075" duration="1643000" />
     </task>
     <task id="LOCAL-00001" summary="#3 Add comparators for Balls">
       <created>1678178086138</created>
@@ -286,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678178100508</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="#4 Add Merge sort">
+      <created>1678183723726</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678183723726</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +311,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="#3 Add comparators for Balls" />
-    <option name="LAST_COMMIT_MESSAGE" value="#3 Add comparators for Balls" />
+    <MESSAGE value="#4 Add Merge sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="#4 Add Merge sort" />
   </component>
 </project>

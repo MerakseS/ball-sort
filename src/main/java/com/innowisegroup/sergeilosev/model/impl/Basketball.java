@@ -12,6 +12,18 @@ public class Basketball extends Ball {
         super(DEFAULT_BASKETBALL_SIZE, DEFAULT_BASKETBALL_COLOR);
     }
 
+    public Basketball(int size) {
+        super(size, DEFAULT_BASKETBALL_COLOR);
+    }
+
+    public Basketball(Color color) {
+        super(DEFAULT_BASKETBALL_SIZE, color);
+    }
+
+    public Basketball(int size, Color color) {
+        super(size, color);
+    }
+
     @Override
     public String toString() {
         return "Basketball{" +

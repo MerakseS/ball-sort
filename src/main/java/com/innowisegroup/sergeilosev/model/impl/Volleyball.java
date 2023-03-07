@@ -12,8 +12,16 @@ public class Volleyball extends Ball {
         super(DEFAULT_VOLLEYBALL_SIZE, DEFAULT_VOLLEYBALL_COLOR);
     }
 
+    public Volleyball(int size) {
+        super(size, DEFAULT_VOLLEYBALL_COLOR);
+    }
+
     public Volleyball(Color color) {
         super(DEFAULT_VOLLEYBALL_SIZE, color);
+    }
+
+    public Volleyball(int size, Color color) {
+        super(size, color);
     }
 
     @Override

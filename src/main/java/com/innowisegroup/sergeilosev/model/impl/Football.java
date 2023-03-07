@@ -12,6 +12,18 @@ public class Football extends Ball {
         super(DEFAULT_FOOTBALL_SIZE, DEFAULT_FOOTBALL_COLOR);
     }
 
+    public Football(int size) {
+        super(size, DEFAULT_FOOTBALL_COLOR);
+    }
+
+    public Football(Color color) {
+        super(DEFAULT_FOOTBALL_SIZE, color);
+    }
+
+    public Football(int size, Color color) {
+        super(size, color);
+    }
+
     @Override
     public String toString() {
         return "Football{" +
