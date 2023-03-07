@@ -8,25 +8,14 @@ import java.util.List;
 public class QuickSort implements Sort {
 
     @Override
-    public <T extends Comparable<? super T>> void sort(List<T> list) {
+    public <T extends Comparable<? super T>> List<T> sort(List<T> list) {
         if (list == null) {
-            return;
+            throw new IllegalArgumentException("Can't sort null");
         }
 
         quickSort(list, 0, list.size() - 1);
-    }
 
-    @Override
-    public <T> void sort(List<T> list, Comparator<? super T> comparator) {
-        if (list == null) {
-            return;
-        }
-
-        if (comparator == null) {
-            throw new IllegalArgumentException("Comparator cannot be null");
-        }
-
-        quickSort(list, 0, list.size() - 1, comparator);
+        return list;
     }
 
     private <T extends Comparable<? super T>> void quickSort(List<T> list, int from, int to) {
@@ -41,20 +30,6 @@ public class QuickSort implements Sort {
         int partitioningIndex = partition(list, from, to);
         quickSort(list, from, partitioningIndex - 1);
         quickSort(list, partitioningIndex, to);
-    }
-
-    private <T> void quickSort(List<T> list, int from, int to, Comparator<? super T> comparator) {
-        if (list.size() == 0) {
-            return;
-        }
-
-        if (from >= to) {
-            return;
-        }
-
-        int partitioningIndex = partition(list, from, to, comparator);
-        quickSort(list, from, partitioningIndex - 1, comparator);
-        quickSort(list, partitioningIndex, to, comparator);
     }
 
     private <T extends Comparable<? super T>> int partition(List<T> list, int from, int to) {
@@ -79,6 +54,35 @@ public class QuickSort implements Sort {
         }
 
         return i;
+    }
+
+    @Override
+    public <T> List<T> sort(List<T> list, Comparator<? super T> comparator) {
+        if (list == null) {
+            throw new IllegalArgumentException("Can't sort null");
+        }
+
+        if (comparator == null) {
+            throw new IllegalArgumentException("Comparator cannot be null");
+        }
+
+        quickSort(list, 0, list.size() - 1, comparator);
+
+        return list;
+    }
+
+    private <T> void quickSort(List<T> list, int from, int to, Comparator<? super T> comparator) {
+        if (list.size() == 0) {
+            return;
+        }
+
+        if (from >= to) {
+            return;
+        }
+
+        int partitioningIndex = partition(list, from, to, comparator);
+        quickSort(list, from, partitioningIndex - 1, comparator);
+        quickSort(list, partitioningIndex, to, comparator);
     }
 
     private <T> int partition(List<T> list, int from, int to, Comparator<? super T> comparator) {

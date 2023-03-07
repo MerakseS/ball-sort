@@ -1,6 +1,6 @@
-package com.innowisegroup.sergeilosev.sort.impl;
+package com.innowisegroup.sergeilosev.sort;
 
-import com.innowisegroup.sergeilosev.sort.Sort;
+import com.innowisegroup.sergeilosev.sort.impl.MergeSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -12,39 +12,46 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-class QuickSortTest {
+class MergeSortTest {
 
-    private static Sort quickSort;
+    private static Sort mergeSort;
 
     @BeforeAll
     static void beforeAll() {
-        quickSort = new QuickSort();
+        mergeSort = new MergeSort();
     }
 
     @Test
     void nullList() {
-        Assertions.assertDoesNotThrow(() -> quickSort.sort(null));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> mergeSort.sort(null));
     }
 
     @Test
     void zeroItems() {
         List<Integer> list = List.of();
-        quickSort.sort(list);
+        list = mergeSort.sort(list);
         Assertions.assertEquals(List.of(), list);
     }
 
     @Test
     void oneItem() {
         List<Integer> list = List.of(1);
-        quickSort.sort(list);
+        list = mergeSort.sort(list);
         Assertions.assertEquals(List.of(1), list);
     }
 
     @Test
     void twoUnsortedItems() {
         List<Integer> list = Arrays.asList(2, 1);
-        quickSort.sort(list);
+        list = mergeSort.sort(list);
         Assertions.assertEquals(List.of(1, 2), list);
+    }
+
+    @Test
+    void threeUnsortedItems() {
+        List<Integer> list = Arrays.asList(2, 3, 1);
+        list = mergeSort.sort(list);
+        Assertions.assertEquals(List.of(1, 2, 3), list);
     }
 
     @Test
@@ -65,7 +72,7 @@ class QuickSortTest {
                 .boxed()
                 .toList();
 
-        quickSort.sort(actualList);
+        actualList = mergeSort.sort(actualList);
 
         Assertions.assertEquals(expectedList, actualList);
     }
@@ -73,13 +80,13 @@ class QuickSortTest {
     @Test
     void withComparator() {
         List<Integer> list = Arrays.asList(7, 2, 5, 10, 9, 1, 4, 7, 3, 8);
-        quickSort.sort(list, Comparator.reverseOrder());
+        list = mergeSort.sort(list, Comparator.reverseOrder());
         Assertions.assertEquals(List.of(10, 9, 8, 7, 7, 5, 4, 3, 2, 1), list);
     }
 
     @Test
     void withNullComparator() {
         List<Integer> list = Arrays.asList(7, 2, 5, 10, 9, 1, 4, 7, 3, 8);
-        Assertions.assertThrows(IllegalArgumentException.class, () -> quickSort.sort(list, null));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> mergeSort.sort(list, null));
     }
 }

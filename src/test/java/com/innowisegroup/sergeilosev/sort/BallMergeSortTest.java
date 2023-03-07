@@ -1,4 +1,4 @@
-package com.innowisegroup.sergeilosev.sort.impl;
+package com.innowisegroup.sergeilosev.sort;
 
 import com.innowisegroup.sergeilosev.comparator.BallColorComparator;
 import com.innowisegroup.sergeilosev.comparator.BallSizeComparator;
@@ -8,7 +8,7 @@ import com.innowisegroup.sergeilosev.model.impl.Basketball;
 import com.innowisegroup.sergeilosev.model.impl.Football;
 import com.innowisegroup.sergeilosev.model.impl.PingPongBall;
 import com.innowisegroup.sergeilosev.model.impl.Volleyball;
-import com.innowisegroup.sergeilosev.sort.Sort;
+import com.innowisegroup.sergeilosev.sort.impl.MergeSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,15 +18,15 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-public class BallQuickSortTest {
+public class BallMergeSortTest {
 
-    private static Sort quickSort;
+    private static Sort mergeSort;
 
     private List<Ball> actualBallList;
 
     @BeforeAll
     static void beforeAll() {
-        quickSort = new QuickSort();
+        mergeSort = new MergeSort();
     }
 
     @BeforeEach
@@ -46,15 +46,15 @@ public class BallQuickSortTest {
         Comparator<Ball> comparator = new BallSizeComparator();
 
         List<Ball> expectedBallList = Arrays.asList(
-                new PingPongBall(Color.ORANGE),
                 new PingPongBall(),
+                new PingPongBall(Color.ORANGE),
                 new Football(),
-                new Volleyball(),
                 new Volleyball(Color.GREEN),
+                new Volleyball(),
                 new Basketball()
         );
 
-        quickSort.sort(actualBallList, comparator);
+        actualBallList = mergeSort.sort(actualBallList, comparator);
 
         Assertions.assertEquals(expectedBallList, actualBallList);
     }
@@ -67,12 +67,12 @@ public class BallQuickSortTest {
                 new PingPongBall(),
                 new Football(),
                 new Volleyball(),
-                new PingPongBall(Color.ORANGE),
                 new Basketball(),
+                new PingPongBall(Color.ORANGE),
                 new Volleyball(Color.GREEN)
         );
 
-        quickSort.sort(actualBallList, comparator);
+        actualBallList = mergeSort.sort(actualBallList, comparator);
 
         Assertions.assertEquals(expectedBallList, actualBallList);
     }
@@ -92,7 +92,7 @@ public class BallQuickSortTest {
                 new PingPongBall()
         );
 
-        quickSort.sort(actualBallList, comparator);
+        actualBallList = mergeSort.sort(actualBallList, comparator);
 
         Assertions.assertEquals(expectedBallList, actualBallList);
     }
@@ -108,7 +108,7 @@ public class BallQuickSortTest {
                 new Basketball()
         );
 
-        quickSort.sort(actualBallList);
+        actualBallList = mergeSort.sort(actualBallList);
 
         Assertions.assertEquals(expectedBallList, actualBallList);
     }
