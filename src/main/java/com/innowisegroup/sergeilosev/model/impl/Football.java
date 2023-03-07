@@ -15,8 +15,8 @@ public class Football extends Ball {
     @Override
     public String toString() {
         return "Football{" +
-               "size=" + size +
-               ", color=" + color +
-               '}';
+                "size=" + size +
+                ", color=" + color +
+                '}';
     }
 }

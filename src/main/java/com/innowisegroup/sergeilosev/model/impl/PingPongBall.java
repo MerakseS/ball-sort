@@ -19,8 +19,8 @@ public class PingPongBall extends Ball {
     @Override
     public String toString() {
         return "PingPongBall{" +
-               "size=" + size +
-               ", color=" + color +
-               '}';
+                "size=" + size +
+                ", color=" + color +
+                '}';
     }
 }

@@ -2,7 +2,8 @@ package com.innowisegroup.sergeilosev.model;
 
 import java.util.Objects;
 
-public abstract class Ball {
+public abstract class Ball implements Comparable<Ball> {
+
     protected final int size;
     protected final Color color;
 
@@ -20,6 +21,12 @@ public abstract class Ball {
     }
 
     @Override
+    public int compareTo(Ball ball) {
+        int sizeCompare = Integer.compare(size, ball.getSize());
+        return sizeCompare != 0 ? sizeCompare : color.compareTo(ball.getColor());
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
@@ -34,13 +41,5 @@ public abstract class Ball {
     @Override
     public int hashCode() {
         return Objects.hash(size, color);
-    }
-
-    @Override
-    public String toString() {
-        return "Ball{" +
-                "size=" + size +
-                ", color=" + color +
-                '}';
     }
 }

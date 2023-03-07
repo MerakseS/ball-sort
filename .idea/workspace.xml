@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da662194-e7fe-4446-8ea7-faf4b0c22855" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/comparator/BallColorComparator.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/comparator/BallSizeComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/Ball.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Basketball.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Football.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/PingPongBall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Volleyball.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/comparator/BallColorComparatorTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/comparator/BallSizeComparatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/impl/ComparatorsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/impl/BallQuickSortTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/impl/QuickSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/impl/QuickSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/Ball.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +70,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -90,7 +82,7 @@
       <recent name="com.innowisegroup.sergeilosev.comparator" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BallSizeComparatorTest">
+  <component name="RunManager" selected="Gradle.BallQuickSortTest.sortBallsBySizeAndColorReversed">
     <configuration name="BallColorComparatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -105,6 +97,52 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.innowisegroup.sergeilosev.comparator.BallColorComparatorTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="BallQuickSortTest.sortBallsBySize" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.innowisegroup.sergeilosev.sort.impl.BallQuickSortTest.sortBallsBySize&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="BallQuickSortTest.sortBallsBySizeAndColorReversed" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.innowisegroup.sergeilosev.sort.impl.BallQuickSortTest.sortBallsBySizeAndColorReversed&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -160,59 +198,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ComparatorsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.innowisegroup.sergeilosev.sort.impl.ComparatorsTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ComparatorsTest.sortBallsByColor" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.innowisegroup.sergeilosev.sort.impl.ComparatorsTest.sortBallsByColor&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BallQuickSortTest.sortBallsBySizeAndColorReversed" />
+        <item itemvalue="Gradle.BallQuickSortTest.sortBallsBySize" />
         <item itemvalue="Gradle.BallSizeComparatorTest" />
         <item itemvalue="Gradle.BallColorComparatorTest" />
         <item itemvalue="Gradle.BallSizeComparatorTest.firstBallSizeBiggerThanSecond" />
-        <item itemvalue="Gradle.ComparatorsTest" />
-        <item itemvalue="Gradle.ComparatorsTest.sortBallsByColor" />
       </list>
     </recent_temporary>
   </component>
@@ -226,6 +218,7 @@
       <updated>1678090443859</updated>
       <workItem from="1678090445513" duration="3000" />
       <workItem from="1678112272615" duration="5250000" />
+      <workItem from="1678175956621" duration="1360000" />
     </task>
     <servers />
   </component>
