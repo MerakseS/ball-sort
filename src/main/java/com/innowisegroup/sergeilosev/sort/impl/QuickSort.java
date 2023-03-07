@@ -13,47 +13,9 @@ public class QuickSort implements Sort {
             throw new IllegalArgumentException("Can't sort null");
         }
 
-        quickSort(list, 0, list.size() - 1);
+        quickSort(list, 0, list.size() - 1, Comparator.naturalOrder());
 
         return list;
-    }
-
-    private <T extends Comparable<? super T>> void quickSort(List<T> list, int from, int to) {
-        if (list.size() == 0) {
-            return;
-        }
-
-        if (from >= to) {
-            return;
-        }
-
-        int partitioningIndex = partition(list, from, to);
-        quickSort(list, from, partitioningIndex - 1);
-        quickSort(list, partitioningIndex, to);
-    }
-
-    private <T extends Comparable<? super T>> int partition(List<T> list, int from, int to) {
-        int i = from;
-        int j = to;
-        T pivot = list.get(from);
-
-        while (i <= j) {
-            while (list.get(i).compareTo(pivot) < 0) {
-                i++;
-            }
-
-            while (list.get(j).compareTo(pivot) > 0) {
-                j--;
-            }
-
-            if (i <= j) {
-                swap(list, i, j);
-                i++;
-                j--;
-            }
-        }
-
-        return i;
     }
 
     @Override

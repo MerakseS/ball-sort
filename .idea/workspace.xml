@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da662194-e7fe-4446-8ea7-faf4b0c22855" name="Changes" comment="#4 Add Merge sort">
+    <list default="true" id="da662194-e7fe-4446-8ea7-faf4b0c22855" name="Changes" comment="#5 Add more variants for Balls constructor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Basketball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Basketball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Football.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Football.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/PingPongBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/PingPongBall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Volleyball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Volleyball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/BallMergeSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallMergeSortTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/sort/BallQuickSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallQuickSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/QuickSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +266,7 @@
       <workItem from="1678090445513" duration="3000" />
       <workItem from="1678112272615" duration="5250000" />
       <workItem from="1678175956621" duration="7206000" />
-      <workItem from="1678210942075" duration="1643000" />
+      <workItem from="1678210942075" duration="3130000" />
     </task>
     <task id="LOCAL-00001" summary="#3 Add comparators for Balls">
       <created>1678178086138</created>
@@ -292,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678183723726</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="#5 Add more variants for Balls constructor">
+      <created>1678212854048</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678212854048</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +316,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="#3 Add comparators for Balls" />
     <MESSAGE value="#4 Add Merge sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="#4 Add Merge sort" />
+    <MESSAGE value="#5 Add more variants for Balls constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="#5 Add more variants for Balls constructor" />
   </component>
 </project>
