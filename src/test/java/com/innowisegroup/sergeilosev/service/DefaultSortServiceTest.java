@@ -1,11 +1,11 @@
-package com.innowisegroup.sergeilosev;
+package com.innowisegroup.sergeilosev.service;
 
 import com.innowisegroup.sergeilosev.comparator.BallColorComparator;
 import com.innowisegroup.sergeilosev.comparator.BallSizeComparator;
-import com.innowisegroup.sergeilosev.comparator.BallTypeComparator;
 import com.innowisegroup.sergeilosev.model.Ball;
 import com.innowisegroup.sergeilosev.model.Color;
-import com.innowisegroup.sergeilosev.sort.Sort;
+import com.innowisegroup.sergeilosev.sort.impl.HeapSort;
+import com.innowisegroup.sergeilosev.sort.impl.MergeSort;
 import com.innowisegroup.sergeilosev.sort.impl.QuickSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -16,15 +16,15 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-public class BallHeapSortTest {
+class DefaultSortServiceTest {
 
-    private static Sort heapSort;
+    private static SortService sortService;
 
     private List<Ball> actualBallList;
 
     @BeforeAll
     static void beforeAll() {
-        heapSort = new QuickSort();
+        sortService = new DefaultSortService();
     }
 
     @BeforeEach
@@ -40,45 +40,7 @@ public class BallHeapSortTest {
     }
 
     @Test
-    void sortBallsBySize() {
-        Comparator<Ball> comparator = new BallSizeComparator();
-
-        List<Ball> expectedBallList = Arrays.asList(
-                new Ball(4, "Ping pong", Color.ORANGE),
-                new Ball(4, "Ping pong", Color.WHITE),
-                new Ball(65, "Football", Color.WHITE),
-                new Ball(66, "Volleyball", Color.GREEN),
-                new Ball(68, "Volleyball", Color.BLUE),
-                new Ball(76, "Basketball", Color.WHITE)
-        );
-
-        actualBallList = heapSort.sort(actualBallList, comparator);
-
-        Assertions.assertEquals(expectedBallList, actualBallList);
-    }
-
-    @Test
-    void sortBallsByColor() {
-        Comparator<Ball> comparator = new BallColorComparator();
-
-        List<Ball> expectedBallList = Arrays.asList(
-                new Ball(76, "Basketball", Color.WHITE),
-                new Ball(4, "Ping pong", Color.WHITE),
-                new Ball(65, "Football", Color.WHITE),
-                new Ball(68, "Volleyball", Color.BLUE),
-                new Ball(4, "Ping pong", Color.ORANGE),
-                new Ball(66, "Volleyball", Color.GREEN)
-        );
-
-        actualBallList = heapSort.sort(actualBallList, comparator);
-
-        Assertions.assertEquals(expectedBallList, actualBallList);
-    }
-
-    @Test
-    void sortBallsByClass() {
-        Comparator<Ball> comparator = new BallTypeComparator();
-
+    void quickSortWithNoComparator() {
         List<Ball> expectedBallList = Arrays.asList(
                 new Ball(76, "Basketball", Color.WHITE),
                 new Ball(65, "Football", Color.WHITE),
@@ -88,17 +50,13 @@ public class BallHeapSortTest {
                 new Ball(68, "Volleyball", Color.BLUE)
         );
 
-        actualBallList = heapSort.sort(actualBallList, comparator);
+        actualBallList = sortService.sort(actualBallList, new QuickSort());
 
         Assertions.assertEquals(expectedBallList, actualBallList);
     }
 
     @Test
-    void sortBallsBySizeAndColorReversed() {
-        Comparator<Ball> comparator = new BallSizeComparator()
-                .thenComparing(new BallColorComparator())
-                .reversed();
-
+    void heapSortBallsBySizeAndColorReversed() {
         List<Ball> expectedBallList = Arrays.asList(
                 new Ball(76, "Basketball", Color.WHITE),
                 new Ball(68, "Volleyball", Color.BLUE),
@@ -108,23 +66,27 @@ public class BallHeapSortTest {
                 new Ball(4, "Ping pong", Color.WHITE)
         );
 
-        actualBallList = heapSort.sort(actualBallList, comparator);
+        Comparator<Ball> comparator = new BallSizeComparator()
+                .thenComparing(new BallColorComparator())
+                .reversed();
+
+        actualBallList = sortService.sort(actualBallList, new HeapSort(), comparator);
 
         Assertions.assertEquals(expectedBallList, actualBallList);
     }
 
     @Test
-    void sortBallsWithoutComparator() {
+    void sortBallsByColor() {
         List<Ball> expectedBallList = Arrays.asList(
+                new Ball(4, "Ping pong", Color.WHITE),
                 new Ball(76, "Basketball", Color.WHITE),
                 new Ball(65, "Football", Color.WHITE),
-                new Ball(4, "Ping pong", Color.WHITE),
+                new Ball(68, "Volleyball", Color.BLUE),
                 new Ball(4, "Ping pong", Color.ORANGE),
-                new Ball(66, "Volleyball", Color.GREEN),
-                new Ball(68, "Volleyball", Color.BLUE)
+                new Ball(66, "Volleyball", Color.GREEN)
         );
 
-        actualBallList = heapSort.sort(actualBallList);
+        actualBallList = sortService.sort(actualBallList, new MergeSort(), new BallColorComparator());
 
         Assertions.assertEquals(expectedBallList, actualBallList);
     }
