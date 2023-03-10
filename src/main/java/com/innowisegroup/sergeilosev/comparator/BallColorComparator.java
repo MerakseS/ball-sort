@@ -8,6 +8,6 @@ public class BallColorComparator implements Comparator<Ball> {
 
     @Override
     public int compare(Ball ball1, Ball ball2) {
-        return ball1.getColor().compareTo(ball2.getColor());
+        return ball1.color().compareTo(ball2.color());
     }
 }

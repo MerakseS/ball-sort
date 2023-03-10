@@ -8,17 +8,6 @@ import java.util.List;
 public class QuickSort implements Sort {
 
     @Override
-    public <T extends Comparable<? super T>> List<T> sort(List<T> list) {
-        if (list == null) {
-            throw new IllegalArgumentException("Can't sort null");
-        }
-
-        quickSort(list, 0, list.size() - 1, Comparator.naturalOrder());
-
-        return list;
-    }
-
-    @Override
     public <T> List<T> sort(List<T> list, Comparator<? super T> comparator) {
         if (list == null) {
             throw new IllegalArgumentException("Can't sort null");

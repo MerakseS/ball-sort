@@ -1,14 +1,10 @@
 package com.innowisegroup.sergeilosev;
 
-import com.innowisegroup.sergeilosev.comparator.BallClassComparator;
 import com.innowisegroup.sergeilosev.comparator.BallColorComparator;
 import com.innowisegroup.sergeilosev.comparator.BallSizeComparator;
+import com.innowisegroup.sergeilosev.comparator.BallTypeComparator;
 import com.innowisegroup.sergeilosev.model.Ball;
 import com.innowisegroup.sergeilosev.model.Color;
-import com.innowisegroup.sergeilosev.model.impl.Basketball;
-import com.innowisegroup.sergeilosev.model.impl.Football;
-import com.innowisegroup.sergeilosev.model.impl.PingPongBall;
-import com.innowisegroup.sergeilosev.model.impl.Volleyball;
 import com.innowisegroup.sergeilosev.sort.Sort;
 import com.innowisegroup.sergeilosev.sort.impl.QuickSort;
 import org.junit.jupiter.api.Assertions;
@@ -34,12 +30,12 @@ public class BallQuickSortTest {
     @BeforeEach
     void setUp() {
         actualBallList = Arrays.asList(
-                new Football(65),
-                new PingPongBall(Color.ORANGE),
-                new Basketball(76, Color.WHITE),
-                new Volleyball(68),
-                new PingPongBall(),
-                new Volleyball(Color.GREEN)
+                new Ball(65, "Football", Color.WHITE),
+                new Ball(4, "Ping pong", Color.ORANGE),
+                new Ball(76, "Basketball", Color.WHITE),
+                new Ball(68, "Volleyball", Color.BLUE),
+                new Ball(4, "Ping pong", Color.WHITE),
+                new Ball(66, "Volleyball", Color.GREEN)
         );
     }
 
@@ -48,12 +44,12 @@ public class BallQuickSortTest {
         Comparator<Ball> comparator = new BallSizeComparator();
 
         List<Ball> expectedBallList = Arrays.asList(
-                new PingPongBall(Color.ORANGE),
-                new PingPongBall(),
-                new Football(65),
-                new Volleyball(Color.GREEN),
-                new Volleyball(68),
-                new Basketball(76, Color.WHITE)
+                new Ball(4, "Ping pong", Color.ORANGE),
+                new Ball(4, "Ping pong", Color.WHITE),
+                new Ball(65, "Football", Color.WHITE),
+                new Ball(66, "Volleyball", Color.GREEN),
+                new Ball(68, "Volleyball", Color.BLUE),
+                new Ball(76, "Basketball", Color.WHITE)
         );
 
         quickSort.sort(actualBallList, comparator);
@@ -66,12 +62,12 @@ public class BallQuickSortTest {
         Comparator<Ball> comparator = new BallColorComparator();
 
         List<Ball> expectedBallList = Arrays.asList(
-                new Basketball(76, Color.WHITE),
-                new PingPongBall(),
-                new Football(65),
-                new Volleyball(68),
-                new PingPongBall(Color.ORANGE),
-                new Volleyball(Color.GREEN)
+                new Ball(76, "Basketball", Color.WHITE),
+                new Ball(4, "Ping pong", Color.WHITE),
+                new Ball(65, "Football", Color.WHITE),
+                new Ball(68, "Volleyball", Color.BLUE),
+                new Ball(4, "Ping pong", Color.ORANGE),
+                new Ball(66, "Volleyball", Color.GREEN)
         );
 
         quickSort.sort(actualBallList, comparator);
@@ -81,15 +77,15 @@ public class BallQuickSortTest {
 
     @Test
     void sortBallsByClass() {
-        Comparator<Ball> comparator = new BallClassComparator();
+        Comparator<Ball> comparator = new BallTypeComparator();
 
         List<Ball> expectedBallList = Arrays.asList(
-                new Basketball(76, Color.WHITE),
-                new Football(65),
-                new PingPongBall(),
-                new PingPongBall(Color.ORANGE),
-                new Volleyball(Color.GREEN),
-                new Volleyball(68)
+                new Ball(76, "Basketball", Color.WHITE),
+                new Ball(65, "Football", Color.WHITE),
+                new Ball(4, "Ping pong", Color.WHITE),
+                new Ball(4, "Ping pong", Color.ORANGE),
+                new Ball(66, "Volleyball", Color.GREEN),
+                new Ball(68, "Volleyball", Color.BLUE)
         );
 
         actualBallList = quickSort.sort(actualBallList, comparator);
@@ -104,12 +100,12 @@ public class BallQuickSortTest {
                 .reversed();
 
         List<Ball> expectedBallList = Arrays.asList(
-                new Basketball(76, Color.WHITE),
-                new Volleyball(68),
-                new Volleyball(Color.GREEN),
-                new Football(65),
-                new PingPongBall(Color.ORANGE),
-                new PingPongBall()
+                new Ball(76, "Basketball", Color.WHITE),
+                new Ball(68, "Volleyball", Color.BLUE),
+                new Ball(66, "Volleyball", Color.GREEN),
+                new Ball(65, "Football", Color.WHITE),
+                new Ball(4, "Ping pong", Color.ORANGE),
+                new Ball(4, "Ping pong", Color.WHITE)
         );
 
         quickSort.sort(actualBallList, comparator);
@@ -120,12 +116,12 @@ public class BallQuickSortTest {
     @Test
     void sortBallsWithoutComparator() {
         List<Ball> expectedBallList = Arrays.asList(
-                new PingPongBall(),
-                new PingPongBall(Color.ORANGE),
-                new Football(65),
-                new Volleyball(Color.GREEN),
-                new Volleyball(68),
-                new Basketball(76, Color.WHITE)
+                new Ball(76, "Basketball", Color.WHITE),
+                new Ball(65, "Football", Color.WHITE),
+                new Ball(4, "Ping pong", Color.WHITE),
+                new Ball(4, "Ping pong", Color.ORANGE),
+                new Ball(66, "Volleyball", Color.GREEN),
+                new Ball(68, "Volleyball", Color.BLUE)
         );
 
         quickSort.sort(actualBallList);

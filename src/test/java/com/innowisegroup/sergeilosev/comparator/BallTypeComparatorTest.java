@@ -8,41 +8,41 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
 
-class BallSizeComparatorTest {
+class BallTypeComparatorTest {
 
-    private static Comparator<Ball> ballSizeComparator;
+    private static Comparator<Ball> ballTypeComparator;
 
     @BeforeAll
     static void beforeAll() {
-        ballSizeComparator = new BallSizeComparator();
+        ballTypeComparator = new BallTypeComparator();
     }
 
     @Test
-    void firstBallSizeBiggerThanSecond() {
-        Ball firstBall = new Ball(78, "Basketball", Color.ORANGE);
-        Ball secondBall = new Ball(4, "Ping pong", Color.WHITE);
+    void firstBallTypeBiggerThanSecond() {
+        Ball firstBall = new Ball(4, "Ping pong", Color.ORANGE);
+        Ball secondBall = new Ball(78, "Basketball", Color.ORANGE);
 
-        int result = ballSizeComparator.compare(firstBall, secondBall);
+        int result = ballTypeComparator.compare(firstBall, secondBall);
 
         Assertions.assertTrue(result > 0);
     }
 
     @Test
-    void firstBallSizeSmallerThanSecond() {
+    void firstBallTypeSmallerThanSecond() {
         Ball firstBall = new Ball(66, "Football", Color.WHITE);
-        Ball secondBall = new Ball(78, "Basketball", Color.ORANGE);
+        Ball secondBall = new Ball(67, "Volleyball", Color.BLUE);
 
-        int result = ballSizeComparator.compare(firstBall, secondBall);
+        int result = ballTypeComparator.compare(firstBall, secondBall);
 
         Assertions.assertTrue(result < 0);
     }
 
     @Test
-    void firstBallSizeEqualsSecond() {
+    void firstBallTypeEqualsSecond() {
         Ball firstBall = new Ball(4, "Ping pong", Color.ORANGE);
         Ball secondBall = new Ball(4, "Ping pong", Color.WHITE);
 
-        int result = ballSizeComparator.compare(firstBall, secondBall);
+        int result = ballTypeComparator.compare(firstBall, secondBall);
 
         Assertions.assertEquals(0, result);
     }

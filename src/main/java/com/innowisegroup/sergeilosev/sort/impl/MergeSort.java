@@ -9,15 +9,6 @@ import java.util.List;
 public class MergeSort implements Sort {
 
     @Override
-    public <T extends Comparable<? super T>> List<T> sort(List<T> list) {
-        if (list == null) {
-            throw new IllegalArgumentException("Can't sort null object.");
-        }
-
-        return mergeSort(list, Comparator.naturalOrder());
-    }
-
-    @Override
     public <T> List<T> sort(List<T> list, Comparator<? super T> comparator) {
         if (list == null) {
             throw new IllegalArgumentException("Can't sort null object.");

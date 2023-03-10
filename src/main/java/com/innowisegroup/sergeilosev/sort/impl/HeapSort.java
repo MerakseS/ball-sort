@@ -10,17 +10,6 @@ public class HeapSort implements Sort {
     private int heapSize;
 
     @Override
-    public <T extends Comparable<? super T>> List<T> sort(List<T> list) {
-        if (list == null) {
-            throw new IllegalArgumentException("Can't sort null");
-        }
-
-        heapSort(list, Comparator.naturalOrder());
-
-        return list;
-    }
-
-    @Override
     public <T> List<T> sort(List<T> list, Comparator<? super T> comparator) {
         if (list == null) {
             throw new IllegalArgumentException("Can't sort null");

@@ -4,10 +4,10 @@ import com.innowisegroup.sergeilosev.model.Ball;
 
 import java.util.Comparator;
 
-public class BallSizeComparator implements Comparator<Ball> {
+public class BallTypeComparator implements Comparator<Ball> {
 
     @Override
     public int compare(Ball ball1, Ball ball2) {
-        return Integer.compare(ball1.size(), ball2.size());
+        return ball1.ballType().compareTo(ball2.ballType());
     }
 }

@@ -1,45 +1,19 @@
 package com.innowisegroup.sergeilosev.model;
 
-import java.util.Objects;
-
-public abstract class Ball implements Comparable<Ball> {
-
-    protected final int size;
-    protected final Color color;
-
-    protected Ball(int size, Color color) {
-        this.size = size;
-        this.color = color;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public Color getColor() {
-        return color;
-    }
+public record Ball(int size, String ballType, Color color) implements Comparable<Ball> {
 
     @Override
     public int compareTo(Ball ball) {
-        int sizeCompare = Integer.compare(size, ball.getSize());
-        return sizeCompare != 0 ? sizeCompare : color.compareTo(ball.getColor());
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
+        int ballTypeCompare = this.ballType().compareTo(ball.ballType());
+        if (ballTypeCompare != 0) {
+            return ballTypeCompare;
         }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Ball ball = (Ball) o;
-        return size == ball.size && color == ball.color;
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(size, color);
+        int sizeCompare = Integer.compare(this.size(), ball.size());
+        if (sizeCompare != 0) {
+            return sizeCompare;
+        }
+
+        return this.color().compareTo(ball.color());
     }
 }

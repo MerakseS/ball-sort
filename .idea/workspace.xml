@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da662194-e7fe-4446-8ea7-faf4b0c22855" name="Changes" comment="#8 Add Heap sort">
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/service/DefaultSortService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/service/SortService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/comparator/BallClassComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/comparator/BallTypeComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/comparator/BallColorComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/comparator/BallColorComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/comparator/BallSizeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/comparator/BallSizeComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Basketball.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Football.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/PingPongBall.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/model/impl/Volleyball.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/HeapSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/HeapSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowisegroup/sergeilosev/sort/impl/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallHeapSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallHeapSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallMergeSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallMergeSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallQuickSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/BallQuickSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/comparator/BallClassComparatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/comparator/BallTypeComparatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/comparator/BallColorComparatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/comparator/BallColorComparatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/comparator/BallSizeComparatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowisegroup/sergeilosev/comparator/BallSizeComparatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,14 +111,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jrt:///home/merakses/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/jbr!/java.base/java/lang/Integer.class" root0="SKIP_INSPECTION" />
-    <setting file="jrt:///home/merakses/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/jbr!/java.base/java/util/Arrays.class" root0="SKIP_INSPECTION" />
-    <setting file="jrt:///home/merakses/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/jbr!/java.base/java/util/Collections.class" root0="SKIP_INSPECTION" />
-    <setting file="jrt:///home/merakses/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/jbr!/java.base/java/util/List.class" root0="SKIP_INSPECTION" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2MdHGMTnLTLG3ohNdezd9Lbk2MG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -105,26 +123,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "/home/merakses/Projects/Idea/ballsort",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.folding",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/merakses/Projects/Idea/ballsort&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.folding&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -227,7 +245,28 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ballsort [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ballsort [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ballsort [test]" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -250,7 +289,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ballsort [test]" />
+        <item itemvalue="Gradle.ballsort [clean]" />
         <item itemvalue="Gradle.BallHeapSortTest" />
         <item itemvalue="Gradle.BallQuickSortTest" />
         <item itemvalue="Gradle.HeapSortTest" />
@@ -271,6 +310,8 @@
       <workItem from="1678175956621" duration="7206000" />
       <workItem from="1678210942075" duration="9035000" />
       <workItem from="1678220814529" duration="604000" />
+      <workItem from="1678260860773" duration="3289000" />
+      <workItem from="1678452911416" duration="2551000" />
     </task>
     <task id="LOCAL-00001" summary="#3 Add comparators for Balls">
       <created>1678178086138</created>
